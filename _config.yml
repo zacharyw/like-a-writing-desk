@@ -1,0 +1,18 @@
+# Site settings
+title: Like a Writing Desk
+header-img: img/home-bg.jpeg
+email: zacharygwright@gmail.com
+description: "Observations and Alchemy"
+baseurl: ""
+url: "http://likeawritingdesk.com"
+twitter_username: PragmaticZach
+github_username:  zacharyw
+facebook_username:  zacharyw
+port: 3000
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
