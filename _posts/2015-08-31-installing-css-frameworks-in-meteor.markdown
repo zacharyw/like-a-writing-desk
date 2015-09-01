@@ -10,7 +10,7 @@ archive:    true
 
 A few months ago I started playing around with the [Meteor](https://www.meteor.com/) web framework. Meteor is a JavaScript platform that uses JS for both the front end (client) and the back end (server). The parenthesis aren't meant to insult your intelligence - a core aspect of writing Meteor code is specifying, within one JavaScript file, if your app is tiny, what code should run on the server and what should run on the client.
 
-The great part about Meteor is how it uses WebSockets to push updates out to clients instead of relying on AJAX polling, so it's awesome for applications that need multiple users to collaborate on the same screen and see each other updates quickly. 
+The great part about Meteor is how it uses WebSockets to push updates out to clients instead of relying on AJAX polling, so it's awesome for applications that need multiple users to collaborate on the same screen and see each other's updates quickly. 
 
 The bad part about Meteor is that it's not really obvious how anything works - you just follow the guides and API and it seems to sort things out. I haven't ran into any issues yet that require me to dive into the core of Meteor, but I'm a little terrified of when that time comes. It also requires MongoDB, which for some people is a deal breaker. 
 
