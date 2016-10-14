@@ -4,7 +4,7 @@ title:      "Push vs Pull"
 subtitle:   "The Internet Comes to You"
 date:       2016-03-10 12:20:00
 author:     "Zachary Wright"
-header-img: "img/cables.jpeg"
+header-img: "img/home-bg.jpg"
 archive:    true
 ---
 
