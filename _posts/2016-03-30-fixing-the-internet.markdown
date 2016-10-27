@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Fixing the Internet"
-date:       2016-03-40 13:15:00
+date:       2016-03-30 13:15:00
 author:     "Zachary Wright"
 header-img: "img/home-bg.jpg"
 archive:    true
