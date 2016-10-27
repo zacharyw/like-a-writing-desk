@@ -31,3 +31,5 @@ That difficulty, of choosing to turn off and not turn on again, begs the questio
 I graduated college nearly six years ago, and during those six years I have done surprisingly little, when I think about it. I’ve gone to work, I’ve taken a few vacations, I’ve spent time with friends, I’ve read books, finished games, wrote some open source software. But there is a large black area of time I know I had that I didn’t use. Free time that was scrolled away. I would feel better about myself if there was a big stack of finished games, movies, books, stories, and memories of experiences I could look at and say, “That’s six years of doing something,” instead of six years of Internet media that I can’t remember any better than what I looked at this morning.
 
 It’s time to change that. It’s time to shift from a lifestyle that involves the Internet pushing its content to me to a life where I judiciously choose to pull what’s important to me.
+
+Here's how I'm going to do it: [Fixing the Internet](http://likeawritingdesk.com/2016/03/15/fixing-the-internet/).
