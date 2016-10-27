@@ -32,4 +32,4 @@ I graduated college nearly six years ago, and during those six years I have done
 
 It’s time to change that. It’s time to shift from a lifestyle that involves the Internet pushing its content to me to a life where I judiciously choose to pull what’s important to me.
 
-Here's how I'm going to do it: [Fixing the Internet](http://likeawritingdesk.com/2016/03/15/fixing-the-internet/).
+Here's how I'm going to do it: [Fixing the Internet](http://likeawritingdesk.com/2016/03/30/fixing-the-internet/).
