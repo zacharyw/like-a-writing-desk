@@ -68,7 +68,7 @@ Some developers separate their fields with `<p>` tags or list tags, but it doesn
 The Form(ation)
 ---------------
 
-In order to utilize a custom form builder we are going to subclass the Rails "FormBuilder":http://api.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html class and either add new helper methods that we need, or override current ones to do something new. Although this is code that's going to help us in our Rails app, it's good to keep in mind that it's really the dynamic power of Ruby that allows us to perform this alchemy. 
+In order to utilize a custom form builder we are going to subclass the Rails [FormBuilder](http://api.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html) class and either add new helper methods that we need, or override current ones to do something new. Although this is code that's going to help us in our Rails app, it's good to keep in mind that it's really the dynamic power of Ruby that allows us to perform this alchemy. 
 
 The first thing you'll want to do is create a Ruby file to hold your form builder, which we will be calling "standard_form_builder":
 
@@ -81,7 +81,7 @@ end
 
 Here we have an empty class that sub-classes FormBuilder - our reasoning for doing this being that FormBuilder has already done most of the work for you. It already contains functionality that knows the name of the object you're building the form for, as well as a reference to the view that lets you use all of the handy view methods like `render` and `content_tag`.
 
-The two most important variables provided by FormBuilder, for our purposes, are `@template` and `@object`. `@template` is the current view, and an instance of "ActionView::Base":http://api.rubyonrails.org/classes/ActionView/ActionView/ActionView/Base.html. You use this object to call any methods you would normally use in an erb file or regular helper (`render`, `content_tag`, etc). `@object` is the model object that you initially passed to `form_for`...in our case, `@post`. It also gives you access to `@object_name`, `@options` (options passed to form for), and `@proc` (block passed to `form_for`). `@object_name` actually is important, it gets passed along to the regular form helpers that you can use without `FormBuilder`, but `FormBuilder` takes care of this for you. That last bit may sound confusing, but just know that helper methods on `FormBuilder`, like `radio_button`, really just act like proxies to another method on `FormHelper` with the same name - all it does is pass along the object name:
+The two most important variables provided by FormBuilder, for our purposes, are `@template` and `@object`. `@template` is the current view, and an instance of [ActionView::Base](http://api.rubyonrails.org/classes/ActionView/ActionView/ActionView/Base.html). You use this object to call any methods you would normally use in an erb file or regular helper (`render`, `content_tag`, etc). `@object` is the model object that you initially passed to `form_for`...in our case, `@post`. It also gives you access to `@object_name`, `@options` (options passed to form for), and `@proc` (block passed to `form_for`). `@object_name` actually is important, it gets passed along to the regular form helpers that you can use without `FormBuilder`, but `FormBuilder` takes care of this for you. That last bit may sound confusing, but just know that helper methods on `FormBuilder`, like `radio_button`, really just act like proxies to another method on `FormHelper` with the same name - all it does is pass along the object name:
 
 ### FormHelper ###
 ~~~ ruby
@@ -153,7 +153,7 @@ As you can see, our `form.text_field` method is automagically creating a label a
 
 Not bad at all. Do note that we had to remove our "required" class since there's no easy way (yet) to get that onto the label. We'll get back to that in a minute. 
 
-At this point we've removed a ton of code from our view, and our `text_field` and `text_area` methods are now easily customized in a single location. However, we still have evil duplication lurking about. For one thing, we have to write the `<dl>` tags on every form, and for another, the text_field method is exactly the same as the text_area method...and that will be true for radio_button and check_box if we choose to override those in our builder, which we should. In addition, I still have to add `:class => "button"` to every submit button, if I'm using that class to "style my buttons":https://github.com/zacharyw/css3buttons. That much duplication should be a crime.
+At this point we've removed a ton of code from our view, and our `text_field` and `text_area` methods are now easily customized in a single location. However, we still have evil duplication lurking about. For one thing, we have to write the `<dl>` tags on every form, and for another, the text_field method is exactly the same as the text_area method...and that will be true for radio_button and check_box if we choose to override those in our builder, which we should. In addition, I still have to add `:class => "button"` to every submit button, if I'm using that class to [style my buttons](https://github.com/zacharyw/css3buttons). That much duplication should be a crime.
 
 Thankfully, we have an easy way to remove it. Remember how I told you that `FormBuilder` has an attribute called `field_helpers` which contains the names of all those helper methods? We can leverage that and the power of Ruby to dynamically create our new helper methods on our custom form builder:
 
@@ -363,6 +363,6 @@ Disclaimer: I've tested and used this in Rails 3. It probably works in Rails 2 t
 
 ### Resources ###
 
-* "onrails":http://onrails.org/2008/06/13/advanced-rails-studio-custom-form-builder
-* "Railscasts Episode #211":http://railscasts.com/episodes/211-validations-in-rails-3
-* "Agile Web Development With Rails 3rd Edition":http://pragprog.com/titles/rails3/agile-web-development-with-rails
+* [onrails](http://onrails.org/2008/06/13/advanced-rails-studio-custom-form-builder)
+* [Railscasts Episode #211](http://railscasts.com/episodes/211-validations-in-rails-3)
+* [Agile Web Development With Rails 3rd Edition](http://pragprog.com/titles/rails3/agile-web-development-with-rails)
