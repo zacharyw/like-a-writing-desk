@@ -355,7 +355,7 @@ And finally, to use your form builder in a view:
   <%= form.text_area( :content, :size => "90x35") %>
   <%= form.submit "Submit"%>
 <% end %>
-~~~ erb
+~~~
 
 This will automatically generate labels for the two input fields and add a "required" class to them, as well as add the "button" class to the submit button. Remember, you can optionally pass in a `:label` or `:label_class` to the `text_field` and `text_area` methods to customize the label.
 
